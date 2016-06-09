@@ -7,19 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A81312151D0316F000C40C4A /* SWMainTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81312141D0316F000C40C4A /* SWMainTableCellView.swift */; };
+		A81312171D03223200C40C4A /* SWMainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81312161D03223200C40C4A /* SWMainTableView.swift */; };
+		A865212C1D09698B00C26D0F /* SWNewAccountWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A865212A1D09698B00C26D0F /* SWNewAccountWindowController.swift */; };
+		A865212D1D09698B00C26D0F /* SWNewAccountWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A865212B1D09698B00C26D0F /* SWNewAccountWindowController.xib */; };
 		A8C795051CF9317300FA3A7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C795041CF9317300FA3A7F /* AppDelegate.swift */; };
-		A8C795071CF9317300FA3A7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C795061CF9317300FA3A7F /* ViewController.swift */; };
+		A8C795071CF9317300FA3A7F /* SWMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C795061CF9317300FA3A7F /* SWMainViewController.swift */; };
 		A8C795091CF9317300FA3A7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C795081CF9317300FA3A7F /* Assets.xcassets */; };
 		A8C7950C1CF9317300FA3A7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C7950A1CF9317300FA3A7F /* Main.storyboard */; };
+		A8F7C9451D099322009422D2 /* SWAccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7C9441D099322009422D2 /* SWAccountManager.swift */; };
+		A8F7C9471D09A072009422D2 /* SWAppLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7C9461D09A072009422D2 /* SWAppLoginManager.swift */; };
+		A8F7C94A1D09A5E2009422D2 /* SWEnterPasswordWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7C9481D09A5E2009422D2 /* SWEnterPasswordWindowController.swift */; };
+		A8F7C94B1D09A5E2009422D2 /* SWEnterPasswordWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8F7C9491D09A5E2009422D2 /* SWEnterPasswordWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A81312141D0316F000C40C4A /* SWMainTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMainTableCellView.swift; sourceTree = "<group>"; };
+		A81312161D03223200C40C4A /* SWMainTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMainTableView.swift; sourceTree = "<group>"; };
+		A865212A1D09698B00C26D0F /* SWNewAccountWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWNewAccountWindowController.swift; sourceTree = "<group>"; };
+		A865212B1D09698B00C26D0F /* SWNewAccountWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SWNewAccountWindowController.xib; sourceTree = "<group>"; };
 		A8C795011CF9317300FA3A7F /* Switcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Switcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C795041CF9317300FA3A7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A8C795061CF9317300FA3A7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A8C795061CF9317300FA3A7F /* SWMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWMainViewController.swift; sourceTree = "<group>"; };
 		A8C795081CF9317300FA3A7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8C7950B1CF9317300FA3A7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8C7950D1CF9317300FA3A7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8F7C9441D099322009422D2 /* SWAccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAccountManager.swift; sourceTree = "<group>"; };
+		A8F7C9461D09A072009422D2 /* SWAppLoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAppLoginManager.swift; sourceTree = "<group>"; };
+		A8F7C9481D09A5E2009422D2 /* SWEnterPasswordWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWEnterPasswordWindowController.swift; sourceTree = "<group>"; };
+		A8F7C9491D09A5E2009422D2 /* SWEnterPasswordWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SWEnterPasswordWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +49,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A81312181D03235700C40C4A /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				A8C795041CF9317300FA3A7F /* AppDelegate.swift */,
+				A8C795081CF9317300FA3A7F /* Assets.xcassets */,
+				A8C7950D1CF9317300FA3A7F /* Info.plist */,
+			);
+			name = "Supporting files";
+			sourceTree = "<group>";
+		};
 		A8C794F81CF9317300FA3A7F = {
 			isa = PBXGroup;
 			children = (
@@ -52,11 +78,17 @@
 		A8C795031CF9317300FA3A7F /* Switcher */ = {
 			isa = PBXGroup;
 			children = (
-				A8C795041CF9317300FA3A7F /* AppDelegate.swift */,
-				A8C795061CF9317300FA3A7F /* ViewController.swift */,
-				A8C795081CF9317300FA3A7F /* Assets.xcassets */,
+				A8C795061CF9317300FA3A7F /* SWMainViewController.swift */,
+				A81312141D0316F000C40C4A /* SWMainTableCellView.swift */,
+				A81312161D03223200C40C4A /* SWMainTableView.swift */,
 				A8C7950A1CF9317300FA3A7F /* Main.storyboard */,
-				A8C7950D1CF9317300FA3A7F /* Info.plist */,
+				A865212A1D09698B00C26D0F /* SWNewAccountWindowController.swift */,
+				A865212B1D09698B00C26D0F /* SWNewAccountWindowController.xib */,
+				A8F7C9481D09A5E2009422D2 /* SWEnterPasswordWindowController.swift */,
+				A8F7C9491D09A5E2009422D2 /* SWEnterPasswordWindowController.xib */,
+				A8F7C9441D099322009422D2 /* SWAccountManager.swift */,
+				A8F7C9461D09A072009422D2 /* SWAppLoginManager.swift */,
+				A81312181D03235700C40C4A /* Supporting files */,
 			);
 			path = Switcher;
 			sourceTree = "<group>";
@@ -119,8 +151,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A865212D1D09698B00C26D0F /* SWNewAccountWindowController.xib in Resources */,
 				A8C795091CF9317300FA3A7F /* Assets.xcassets in Resources */,
 				A8C7950C1CF9317300FA3A7F /* Main.storyboard in Resources */,
+				A8F7C94B1D09A5E2009422D2 /* SWEnterPasswordWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,8 +165,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8C795071CF9317300FA3A7F /* ViewController.swift in Sources */,
+				A8F7C9471D09A072009422D2 /* SWAppLoginManager.swift in Sources */,
+				A81312151D0316F000C40C4A /* SWMainTableCellView.swift in Sources */,
+				A8F7C9451D099322009422D2 /* SWAccountManager.swift in Sources */,
+				A8C795071CF9317300FA3A7F /* SWMainViewController.swift in Sources */,
+				A81312171D03223200C40C4A /* SWMainTableView.swift in Sources */,
+				A865212C1D09698B00C26D0F /* SWNewAccountWindowController.swift in Sources */,
 				A8C795051CF9317300FA3A7F /* AppDelegate.swift in Sources */,
+				A8F7C94A1D09A5E2009422D2 /* SWEnterPasswordWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
