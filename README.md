@@ -27,8 +27,8 @@ The app saves your IDs in a local file and everytime you enter the password, for
 ## Known issue
 Certain states of App Store and iTunes App may cause the AppleScript part run to error, but don't worry, click login again, it will work.
 
-
-# <span id = "chinese">中文说明</span>
+<span id="chinese"></span>
+# 中文说明
 Switcher 是一个用 Swift 编写的 OS X 应用，可以很轻松地切换 App Store 和 iTunes 的账号，对于同时使用多个 Apple ID 的人来说非常地方便。
 
 ## 应用下载
