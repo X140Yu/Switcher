@@ -19,12 +19,13 @@ class SWEnterPasswordWindowController: NSWindowController {
     @IBOutlet weak var passwordTextField: NSSecureTextField!
     @IBOutlet weak var prompotTextField: NSTextField!
     var userName = ""
+    var password = ""
     var loginType = SWLoginType.None
-
+    
     override func windowDidLoad() {
         super.windowDidLoad()
-        passwordTextField.stringValue = ""
         prompotTextField.stringValue = "Enter password for \(userName)"
+        passwordTextField.stringValue = password
     }
 
     @IBAction func SignIn(sender: NSButton) {

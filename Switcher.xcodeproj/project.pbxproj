@@ -15,6 +15,11 @@
 		A8C795071CF9317300FA3A7F /* SWMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C795061CF9317300FA3A7F /* SWMainViewController.swift */; };
 		A8C795091CF9317300FA3A7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C795081CF9317300FA3A7F /* Assets.xcassets */; };
 		A8C7950C1CF9317300FA3A7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C7950A1CF9317300FA3A7F /* Main.storyboard */; };
+		A8EC4CDC1D2BA9350062C34D /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EC4CDB1D2BA9350062C34D /* MASPreferencesWindowController.m */; };
+		A8EC4CDE1D2BA9440062C34D /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8EC4CDD1D2BA9440062C34D /* MASPreferencesWindow.xib */; };
+		A8EC4CE31D2BAAE30062C34D /* SWMainPreferenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EC4CE11D2BAAE30062C34D /* SWMainPreferenceController.swift */; };
+		A8EC4CE41D2BAAE30062C34D /* SWMainPreferenceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8EC4CE21D2BAAE30062C34D /* SWMainPreferenceController.xib */; };
+		A8EC4CE61D2BB29A0062C34D /* SWPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EC4CE51D2BB29A0062C34D /* SWPreferences.swift */; };
 		A8F7C9451D099322009422D2 /* SWAccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7C9441D099322009422D2 /* SWAccountManager.swift */; };
 		A8F7C9471D09A072009422D2 /* SWAppLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7C9461D09A072009422D2 /* SWAppLoginManager.swift */; };
 		A8F7C94A1D09A5E2009422D2 /* SWEnterPasswordWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7C9481D09A5E2009422D2 /* SWEnterPasswordWindowController.swift */; };
@@ -32,6 +37,15 @@
 		A8C795081CF9317300FA3A7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8C7950B1CF9317300FA3A7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8C7950D1CF9317300FA3A7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8EC4CD71D2BA9340062C34D /* Switcher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Switcher-Bridging-Header.h"; sourceTree = "<group>"; };
+		A8EC4CD81D2BA9350062C34D /* MASPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferences.h; sourceTree = "<group>"; };
+		A8EC4CD91D2BA9350062C34D /* MASPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesViewController.h; sourceTree = "<group>"; };
+		A8EC4CDA1D2BA9350062C34D /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
+		A8EC4CDB1D2BA9350062C34D /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
+		A8EC4CDD1D2BA9440062C34D /* MASPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASPreferencesWindow.xib; sourceTree = "<group>"; };
+		A8EC4CE11D2BAAE30062C34D /* SWMainPreferenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMainPreferenceController.swift; sourceTree = "<group>"; };
+		A8EC4CE21D2BAAE30062C34D /* SWMainPreferenceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SWMainPreferenceController.xib; sourceTree = "<group>"; };
+		A8EC4CE51D2BB29A0062C34D /* SWPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPreferences.swift; sourceTree = "<group>"; };
 		A8F7C9441D099322009422D2 /* SWAccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAccountManager.swift; sourceTree = "<group>"; };
 		A8F7C9461D09A072009422D2 /* SWAppLoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAppLoginManager.swift; sourceTree = "<group>"; };
 		A8F7C9481D09A5E2009422D2 /* SWEnterPasswordWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWEnterPasswordWindowController.swift; sourceTree = "<group>"; };
@@ -52,6 +66,7 @@
 		A81312181D03235700C40C4A /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				A8EC4CD71D2BA9340062C34D /* Switcher-Bridging-Header.h */,
 				A8C795041CF9317300FA3A7F /* AppDelegate.swift */,
 				A8C795081CF9317300FA3A7F /* Assets.xcassets */,
 				A8C7950D1CF9317300FA3A7F /* Info.plist */,
@@ -78,6 +93,8 @@
 		A8C795031CF9317300FA3A7F /* Switcher */ = {
 			isa = PBXGroup;
 			children = (
+				A8EC4CE01D2BAAB90062C34D /* Preference */,
+				A8EC4CD61D2BA8B10062C34D /* ThirdParty */,
 				A8C795061CF9317300FA3A7F /* SWMainViewController.swift */,
 				A81312141D0316F000C40C4A /* SWMainTableCellView.swift */,
 				A81312161D03223200C40C4A /* SWMainTableView.swift */,
@@ -91,6 +108,36 @@
 				A81312181D03235700C40C4A /* Supporting files */,
 			);
 			path = Switcher;
+			sourceTree = "<group>";
+		};
+		A8EC4CD61D2BA8B10062C34D /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				A8EC4CDF1D2BA9510062C34D /* MASPreferences */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		A8EC4CDF1D2BA9510062C34D /* MASPreferences */ = {
+			isa = PBXGroup;
+			children = (
+				A8EC4CD81D2BA9350062C34D /* MASPreferences.h */,
+				A8EC4CD91D2BA9350062C34D /* MASPreferencesViewController.h */,
+				A8EC4CDA1D2BA9350062C34D /* MASPreferencesWindowController.h */,
+				A8EC4CDB1D2BA9350062C34D /* MASPreferencesWindowController.m */,
+				A8EC4CDD1D2BA9440062C34D /* MASPreferencesWindow.xib */,
+			);
+			name = MASPreferences;
+			sourceTree = "<group>";
+		};
+		A8EC4CE01D2BAAB90062C34D /* Preference */ = {
+			isa = PBXGroup;
+			children = (
+				A8EC4CE51D2BB29A0062C34D /* SWPreferences.swift */,
+				A8EC4CE11D2BAAE30062C34D /* SWMainPreferenceController.swift */,
+				A8EC4CE21D2BAAE30062C34D /* SWMainPreferenceController.xib */,
+			);
+			name = Preference;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,8 +200,10 @@
 			files = (
 				A865212D1D09698B00C26D0F /* SWNewAccountWindowController.xib in Resources */,
 				A8C795091CF9317300FA3A7F /* Assets.xcassets in Resources */,
+				A8EC4CDE1D2BA9440062C34D /* MASPreferencesWindow.xib in Resources */,
 				A8C7950C1CF9317300FA3A7F /* Main.storyboard in Resources */,
 				A8F7C94B1D09A5E2009422D2 /* SWEnterPasswordWindowController.xib in Resources */,
+				A8EC4CE41D2BAAE30062C34D /* SWMainPreferenceController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,11 +214,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8EC4CE61D2BB29A0062C34D /* SWPreferences.swift in Sources */,
 				A8F7C9471D09A072009422D2 /* SWAppLoginManager.swift in Sources */,
 				A81312151D0316F000C40C4A /* SWMainTableCellView.swift in Sources */,
 				A8F7C9451D099322009422D2 /* SWAccountManager.swift in Sources */,
 				A8C795071CF9317300FA3A7F /* SWMainViewController.swift in Sources */,
+				A8EC4CDC1D2BA9350062C34D /* MASPreferencesWindowController.m in Sources */,
 				A81312171D03223200C40C4A /* SWMainTableView.swift in Sources */,
+				A8EC4CE31D2BAAE30062C34D /* SWMainPreferenceController.swift in Sources */,
 				A865212C1D09698B00C26D0F /* SWNewAccountWindowController.swift in Sources */,
 				A8C795051CF9317300FA3A7F /* AppDelegate.swift in Sources */,
 				A8F7C94A1D09A5E2009422D2 /* SWEnterPasswordWindowController.swift in Sources */,
@@ -276,12 +328,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Switcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.X140Yu.Switcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Switcher/Switcher-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -289,12 +344,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Switcher/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.X140Yu.Switcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Switcher/Switcher-Bridging-Header.h";
 			};
 			name = Release;
 		};

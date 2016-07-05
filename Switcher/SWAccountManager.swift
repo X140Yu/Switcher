@@ -9,7 +9,7 @@
 import Foundation
 
 
-class SWAccountManager {
+final class SWAccountManager {
     static let sharedInstance = SWAccountManager()
     private init() {}
     private let passwordCache = NSCache()
@@ -45,10 +45,25 @@ class SWAccountManager {
     
     // MARK: Password
     func getPasswordWith(userName: String) -> String? {
-        return passwordCache.objectForKey(userName) as? String
+        if SWPreferences.passwordOnDisk() == false {
+            return passwordCache.objectForKey(userName) as? String ?? ""
+        } else {
+            return NSUserDefaults.standardUserDefaults().objectForKey(userName) as? String ?? ""
+        }
     }
     
     func save(password: String, with userName: String) {
-        passwordCache.setObject(password, forKey: userName)
+        if SWPreferences.passwordOnDisk() == false {
+            passwordCache.setObject(password, forKey: userName)
+        } else {
+            NSUserDefaults.standardUserDefaults().setObject(password, forKey: userName)
+        }
+    }
+    
+    static func clearPasswordDiskCache() {
+        let userNameArray =  SWAccountManager.getUserNameArray()
+        userNameArray.forEach { (username) in
+            NSUserDefaults.standardUserDefaults().removeObjectForKey(username)
+        }
     }
 }

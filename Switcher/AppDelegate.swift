@@ -11,6 +11,11 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    lazy var preferenceWindowController: NSWindowController = {
+        let preferenceMain = SWMainPreferenceController()
+        let _preferenceWindowController = MASPreferencesWindowController(viewControllers: [preferenceMain], title: "Preferences")
+        return _preferenceWindowController
+    }()
 
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
@@ -29,6 +34,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             NSApplication.sharedApplication().windows[0].makeKeyAndOrderFront(self)
             return true
         }
+    }
+    @IBAction func openPreferencesWindow(sender: NSMenuItem) {
+        preferenceWindowController.showWindow(nil)
     }
 
     @IBAction func handleNewAccountItemAction(sender: NSMenuItem) {

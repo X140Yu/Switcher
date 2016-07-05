@@ -26,7 +26,9 @@ class SWMainTableCellView: NSTableCellView {
     private func commonLogin() {
         let userName = emailTextField.stringValue
         if let password = SWAccountManager.sharedInstance.getPasswordWith(userName) {
-            enterPasswordSheet.passwordTextField.stringValue = password
+            enterPasswordSheet.password = password
+        } else {
+            enterPasswordSheet.password = ""
         }
         
         enterPasswordSheet.userName = userName
