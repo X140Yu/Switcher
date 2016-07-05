@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A81312151D0316F000C40C4A /* SWMainTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81312141D0316F000C40C4A /* SWMainTableCellView.swift */; };
 		A81312171D03223200C40C4A /* SWMainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81312161D03223200C40C4A /* SWMainTableView.swift */; };
+		A861CAEB1D2BFB5F00BA0BAC /* SWMainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A861CAEA1D2BFB5F00BA0BAC /* SWMainWindowController.swift */; };
 		A865212C1D09698B00C26D0F /* SWNewAccountWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A865212A1D09698B00C26D0F /* SWNewAccountWindowController.swift */; };
 		A865212D1D09698B00C26D0F /* SWNewAccountWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A865212B1D09698B00C26D0F /* SWNewAccountWindowController.xib */; };
 		A8C795051CF9317300FA3A7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C795041CF9317300FA3A7F /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		A81312141D0316F000C40C4A /* SWMainTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMainTableCellView.swift; sourceTree = "<group>"; };
 		A81312161D03223200C40C4A /* SWMainTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMainTableView.swift; sourceTree = "<group>"; };
+		A861CAEA1D2BFB5F00BA0BAC /* SWMainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMainWindowController.swift; sourceTree = "<group>"; };
 		A865212A1D09698B00C26D0F /* SWNewAccountWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWNewAccountWindowController.swift; sourceTree = "<group>"; };
 		A865212B1D09698B00C26D0F /* SWNewAccountWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SWNewAccountWindowController.xib; sourceTree = "<group>"; };
 		A8C795011CF9317300FA3A7F /* Switcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Switcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 				A81312141D0316F000C40C4A /* SWMainTableCellView.swift */,
 				A81312161D03223200C40C4A /* SWMainTableView.swift */,
 				A8C7950A1CF9317300FA3A7F /* Main.storyboard */,
+				A861CAEA1D2BFB5F00BA0BAC /* SWMainWindowController.swift */,
 				A865212A1D09698B00C26D0F /* SWNewAccountWindowController.swift */,
 				A865212B1D09698B00C26D0F /* SWNewAccountWindowController.xib */,
 				A8F7C9481D09A5E2009422D2 /* SWEnterPasswordWindowController.swift */,
@@ -224,6 +227,7 @@
 				A8EC4CE31D2BAAE30062C34D /* SWMainPreferenceController.swift in Sources */,
 				A865212C1D09698B00C26D0F /* SWNewAccountWindowController.swift in Sources */,
 				A8C795051CF9317300FA3A7F /* AppDelegate.swift in Sources */,
+				A861CAEB1D2BFB5F00BA0BAC /* SWMainWindowController.swift in Sources */,
 				A8F7C94A1D09A5E2009422D2 /* SWEnterPasswordWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
