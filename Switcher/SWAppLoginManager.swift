@@ -10,7 +10,7 @@ import Foundation
 import AppKit
 
 class SWAppLoginManager {
-    static func loginAppStoreWith(appleID: String, password: String) {
+    static func loginAppStoreWith(_ appleID: String, password: String) {
         let appleScript = NSAppleScript(source:
             "on appIsRunning(appName)\n" +
             "    tell application \"System Events\" to (name of processes) contains appName\n" +
@@ -53,7 +53,7 @@ class SWAppLoginManager {
         }
     }
     
-    static func loginiTnesWith(appleID: String, password: String) {
+    static func loginiTnesWith(_ appleID: String, password: String) {
         let appleScript = NSAppleScript(source:
             "on appIsRunning(appName)\n" +
             "    tell application \"System Events\" to (name of processes) contains appName\n" +
@@ -100,7 +100,7 @@ struct ErrorHanding {
         let alert = NSAlert()
         alert.messageText = "Sorry, some errors occured. :("
         alert.informativeText = "Please try again."
-        alert.addButtonWithTitle("Ok")
+        alert.addButton(withTitle: "Ok")
         alert.runModal()
     }
 }

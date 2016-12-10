@@ -21,7 +21,7 @@ class SWMainPreferenceController: NSViewController, MASPreferencesViewController
     }
     
     // MARK: - IBAction    
-    @IBAction func clickMenuBarBox(sender: NSButton) {
+    @IBAction func clickMenuBarBox(_ sender: NSButton) {
         if sender.state == 1 {
             SWPreferences.saveShowMenuBarOption(true)
         } else {
@@ -29,7 +29,7 @@ class SWMainPreferenceController: NSViewController, MASPreferencesViewController
         }
     }
 
-    @IBAction func clickPasswordBox(sender: NSButton) {
+    @IBAction func clickPasswordBox(_ sender: NSButton) {
         if sender.state == 1 {
             SWPreferences.savePasswordOnDiskOption(true)
         } else {

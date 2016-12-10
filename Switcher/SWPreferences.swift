@@ -10,28 +10,28 @@ import Foundation
 
 final class SWPreferences {
 
-    private struct Keys {
+    fileprivate struct Keys {
         static let ShowMenuBarKey = "SWShowMenuBarKey"
         static let PasswordOnDisk = "SWPasswordOnDisk"
     }
     
     static func showMenuBar() -> Bool {
-        if NSUserDefaults.standardUserDefaults().objectForKey(Keys.ShowMenuBarKey) != nil {
-            return NSUserDefaults.standardUserDefaults().boolForKey(Keys.ShowMenuBarKey)
+        if UserDefaults.standard.object(forKey: Keys.ShowMenuBarKey) != nil {
+            return UserDefaults.standard.bool(forKey: Keys.ShowMenuBarKey)
         }
         return true
     }
     
-    static func saveShowMenuBarOption(option: Bool) {
-        NSUserDefaults.standardUserDefaults().setBool(option, forKey: Keys.ShowMenuBarKey)
+    static func saveShowMenuBarOption(_ option: Bool) {
+        UserDefaults.standard.set(option, forKey: Keys.ShowMenuBarKey)
     }
     
     // default is false
     static func passwordOnDisk() -> Bool {
-        return NSUserDefaults.standardUserDefaults().boolForKey(Keys.PasswordOnDisk)
+        return UserDefaults.standard.bool(forKey: Keys.PasswordOnDisk)
     }
     
-    static func savePasswordOnDiskOption(option: Bool) {
-        NSUserDefaults.standardUserDefaults().setBool(option, forKey: Keys.PasswordOnDisk)
+    static func savePasswordOnDiskOption(_ option: Bool) {
+        UserDefaults.standard.set(option, forKey: Keys.PasswordOnDisk)
     }
 }

@@ -9,7 +9,7 @@
 import Cocoa
 
 protocol SWAddAccountDelegate: class {
-    func didAddAccount(userName: String)
+    func didAddAccount(_ userName: String)
 }
 
 class SWMainViewController: NSViewController {
@@ -23,22 +23,22 @@ class SWMainViewController: NSViewController {
         newAccountSheet.delegate = self
     }
     
-    func showAddAccountWindow(sender: NSMenuItem) {
-        sender.hidden = true
-        NSApplication.sharedApplication().mainWindow?.beginSheet(newAccountSheet.window!, completionHandler: { (response) in
-            sender.hidden = false
+    func showAddAccountWindow(_ sender: NSMenuItem) {
+        sender.isHidden = true
+        NSApplication.shared().mainWindow?.beginSheet(newAccountSheet.window!, completionHandler: { (response) in
+            sender.isHidden = false
         })
     }
 }
 
 // MARK: - TableView DataSource
 extension SWMainViewController: NSTableViewDataSource {
-    func numberOfRowsInTableView(tableView: NSTableView) -> Int {
+    func numberOfRows(in tableView: NSTableView) -> Int {
         return userNameArray.count
     }
     
-    func tableView(tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let cell = tableView.makeViewWithIdentifier("cell", owner: self) as! SWMainTableCellView
+    func tableView(_ tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        let cell = tableView.make(withIdentifier: "cell", owner: self) as! SWMainTableCellView
         cell.emailTextField.stringValue = userNameArray[row]
         return cell
     }
@@ -46,7 +46,7 @@ extension SWMainViewController: NSTableViewDataSource {
 
 // MARK: - Menu Action
 extension SWMainViewController {
-    @IBAction func deleteAccount(sender: NSMenuItem) {
+    @IBAction func deleteAccount(_ sender: NSMenuItem) {
         let row = tableView.clickedRow
         SWAccountManager.removeUserNameAt(row)
         userNameArray =  SWAccountManager.getUserNameArray()
@@ -56,7 +56,7 @@ extension SWMainViewController {
 
 // MARK: - Delegate Methods
 extension SWMainViewController: SWAddAccountDelegate {
-    func didAddAccount(userName: String) {
+    func didAddAccount(_ userName: String) {
         SWAccountManager.save(userName)
         userNameArray = SWAccountManager.getUserNameArray()
         tableView.reloadData()

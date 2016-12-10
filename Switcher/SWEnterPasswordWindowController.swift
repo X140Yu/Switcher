@@ -9,8 +9,8 @@
 import Cocoa
 
 enum SWLoginType {
-    case None
-    case AppStore
+    case none
+    case appStore
     case iTunes
 }
 
@@ -20,7 +20,7 @@ class SWEnterPasswordWindowController: NSWindowController {
     @IBOutlet weak var prompotTextField: NSTextField!
     var userName = ""
     var password = ""
-    var loginType = SWLoginType.None
+    var loginType = SWLoginType.none
     
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -28,13 +28,13 @@ class SWEnterPasswordWindowController: NSWindowController {
         passwordTextField.stringValue = password
     }
 
-    @IBAction func SignIn(sender: NSButton) {
+    @IBAction func SignIn(_ sender: NSButton) {
         let password = passwordTextField.stringValue
         if password != "" {
             SWAccountManager.sharedInstance.save(password, with: userName)
             window?.sheetParent?.endSheet(window!, returnCode: NSModalResponseOK)
             switch loginType {
-            case .AppStore:
+            case .appStore:
                 SWAppLoginManager.loginAppStoreWith(userName, password: password)
             case .iTunes:
                 SWAppLoginManager.loginiTnesWith(userName, password: password)
@@ -43,7 +43,7 @@ class SWEnterPasswordWindowController: NSWindowController {
         }
     }
 
-    @IBAction func cancel(sender: NSButton) {
+    @IBAction func cancel(_ sender: NSButton) {
         window?.sheetParent?.endSheet(window!, returnCode: NSModalResponseCancel)
     }
 }

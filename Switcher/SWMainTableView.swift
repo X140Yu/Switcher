@@ -14,11 +14,11 @@ class SWMainTableView: NSTableView {
      Draw grid lines in NSTableView only for populated rows.
      Origin soultion from http://stackoverflow.com/a/6844340/6343571
      */
-    override func drawGridInClipRect(clipRect: NSRect) {
-        let lastRowRect = rectOfRow(numberOfRows - 1)
+    override func drawGrid(inClipRect clipRect: NSRect) {
+        let lastRowRect = rect(ofRow: numberOfRows - 1)
         let myClipRect = NSRect(x: 0, y: 0, width: lastRowRect.size.width, height: NSMaxY(lastRowRect))
         let finalClipRect = NSIntersectionRect(clipRect, myClipRect)
-        super.drawGridInClipRect(finalClipRect)
+        super.drawGrid(inClipRect: finalClipRect)
     }
 
 }

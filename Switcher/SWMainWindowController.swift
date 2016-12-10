@@ -15,7 +15,7 @@ class SWMainWindowController: NSWindowController {
         
         // http://blog.seedlab.io/currencyx-like-window/
         if let window = self.window {
-            window.titleVisibility = .Hidden
+            window.titleVisibility = .hidden
             window.titlebarAppearsTransparent = true
         }
     }

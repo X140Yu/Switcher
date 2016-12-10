@@ -13,17 +13,17 @@ class SWMainTableCellView: NSTableCellView {
     @IBOutlet weak var emailTextField: NSTextField!
     let enterPasswordSheet = SWEnterPasswordWindowController(windowNibName: "SWEnterPasswordWindowController")
 
-    @IBAction func loginAppStore(sender: NSButton) {
-        enterPasswordSheet.loginType = SWLoginType.AppStore
+    @IBAction func loginAppStore(_ sender: NSButton) {
+        enterPasswordSheet.loginType = SWLoginType.appStore
         commonLogin()
     }
 
-    @IBAction func loginiTunes(sender: NSButton) {
+    @IBAction func loginiTunes(_ sender: NSButton) {
         enterPasswordSheet.loginType = SWLoginType.iTunes
         commonLogin()
     }
     
-    private func commonLogin() {
+    fileprivate func commonLogin() {
         let userName = emailTextField.stringValue
         if let password = SWAccountManager.sharedInstance.getPasswordWith(userName) {
             enterPasswordSheet.password = password
@@ -32,6 +32,6 @@ class SWMainTableCellView: NSTableCellView {
         }
         
         enterPasswordSheet.userName = userName
-        NSApplication.sharedApplication().mainWindow?.beginSheet(enterPasswordSheet.window!, completionHandler: nil)
+        NSApplication.shared().mainWindow?.beginSheet(enterPasswordSheet.window!, completionHandler: nil)
     }
 }
