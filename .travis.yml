@@ -1,0 +1,5 @@
+osx_image: xcode9
+language: swift
+xcode_project: Switcher.xcworkspace
+xcode_scheme: Switcher
+podfile: Podfile
