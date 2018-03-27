@@ -9,24 +9,26 @@
 import Cocoa
 
 class SWNewAccountWindowController: NSWindowController {
-    
+
     weak var delegate: SWAddAccountDelegate?
     @IBOutlet weak var textField: NSTextField!
-    
+
     override func windowDidLoad() {
         super.windowDidLoad()
         textField.stringValue = ""
     }
-    
+
     @IBAction func addAccount(_ sender: NSButton) {
         let appleID = textField.stringValue
-        if appleID != "" {
+        guard let window = window else { return }
+        if appleID.isEmpty == false {
             delegate?.didAddAccount(appleID)
-            window?.sheetParent?.endSheet(window!, returnCode: NSApplication.ModalResponse.OK)
+            window.sheetParent?.endSheet(window, returnCode: .OK)
         }
     }
-    
+
     @IBAction func cancel(_ sender: NSButton) {
-        window?.sheetParent?.endSheet(window!, returnCode: NSApplication.ModalResponse.cancel)
+        guard let window = window else { return }
+        window.sheetParent?.endSheet(window, returnCode: .cancel)
     }
 }

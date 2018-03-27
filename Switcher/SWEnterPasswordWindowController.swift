@@ -21,29 +21,24 @@ class SWEnterPasswordWindowController: NSWindowController {
     var userName = ""
     var password = ""
     var loginType = SWLoginType.none
-    
+
     override func windowDidLoad() {
         super.windowDidLoad()
         prompotTextField.stringValue = "Enter password for \(userName)"
         passwordTextField.stringValue = password
     }
 
-    @IBAction func SignIn(_ sender: NSButton) {
+    @IBAction func signIn(_ sender: NSButton) {
         let password = passwordTextField.stringValue
-        if password != "" {
-            SWAccountManager.sharedInstance.save(password, with: userName)
-            window?.sheetParent?.endSheet(window!, returnCode: NSApplication.ModalResponse.OK)
-            switch loginType {
-            case .appStore:
-                SWAppLoginManager.loginAppStoreWith(userName, password: password)
-            case .iTunes:
-                SWAppLoginManager.loginiTnesWith(userName, password: password)
-            default: break
-            }
-        }
+        guard password.isEmpty == false else { return }
+        guard let window = window else { return }
+        SWAccountManager.sharedInstance.save(password, with: userName)
+        window.sheetParent?.endSheet(window, returnCode: .OK)
+        SWAppLoginManager.loginWith(loginType, appleID: userName, password: password)
     }
 
     @IBAction func cancel(_ sender: NSButton) {
-        window?.sheetParent?.endSheet(window!, returnCode: NSApplication.ModalResponse.cancel)
+        guard let window = window else { return }
+        window.sheetParent?.endSheet(window, returnCode: .cancel)
     }
 }

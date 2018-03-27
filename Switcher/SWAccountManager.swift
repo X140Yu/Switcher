@@ -8,17 +8,16 @@
 
 import Foundation
 
-
 final class SWAccountManager {
     static let sharedInstance = SWAccountManager()
     fileprivate init() {}
     fileprivate let passwordCache = NSCache<AnyObject, AnyObject>()
-    
+
     fileprivate struct Keys {
         static let UserNameArrayKey = "SWUserNameArray"
         static let UserNameCountKey = "SWUserNameCount"
     }
-    
+
     // MARK: UserName
     static func save(_ userName: String) {
         var userNameArray = getUserNameArray()
@@ -26,23 +25,23 @@ final class SWAccountManager {
         UserDefaults.standard.set(userNameArray, forKey: Keys.UserNameArrayKey)
     }
 
-    static func getUserNameArray() -> Array<String> {
-        if UserDefaults.standard.object(forKey: Keys.UserNameArrayKey) != nil {
-            return UserDefaults.standard.object(forKey: Keys.UserNameArrayKey) as! Array
+    static func getUserNameArray() -> [String] {
+        guard let names = UserDefaults.standard.object(forKey: Keys.UserNameArrayKey) as? [String] else {
+            return []
         }
-        return []
+        return names
     }
-    
+
     static func removeUserNameAt(_ index: Int) {
         var userNameArray = getUserNameArray()
         userNameArray.remove(at: index)
         UserDefaults.standard.set(userNameArray, forKey: Keys.UserNameArrayKey)
     }
-    
+
     static func getUsernameCount() -> Int {
         return getUserNameArray().count
     }
-    
+
     // MARK: Password
     func getPasswordWith(_ userName: String) -> String? {
         if SWPreferences.passwordOnDisk() == false {
@@ -51,7 +50,7 @@ final class SWAccountManager {
             return UserDefaults.standard.object(forKey: userName) as? String ?? ""
         }
     }
-    
+
     func save(_ password: String, with userName: String) {
         if SWPreferences.passwordOnDisk() == false {
             passwordCache.setObject(password as AnyObject, forKey: userName as AnyObject)
@@ -59,7 +58,7 @@ final class SWAccountManager {
             UserDefaults.standard.set(password, forKey: userName)
         }
     }
-    
+
     static func clearPasswordDiskCache() {
         let userNameArray =  SWAccountManager.getUserNameArray()
         userNameArray.forEach { (username) in

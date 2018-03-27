@@ -22,7 +22,7 @@ class SWMainTableCellView: NSTableCellView {
         enterPasswordSheet.loginType = SWLoginType.iTunes
         commonLogin()
     }
-    
+
     fileprivate func commonLogin() {
         let userName = emailTextField.stringValue
         if let password = SWAccountManager.sharedInstance.getPasswordWith(userName) {
@@ -30,8 +30,10 @@ class SWMainTableCellView: NSTableCellView {
         } else {
             enterPasswordSheet.password = ""
         }
-        
+
         enterPasswordSheet.userName = userName
-        NSApplication.shared.mainWindow?.beginSheet(enterPasswordSheet.window!, completionHandler: nil)
+
+        guard let window = enterPasswordSheet.window else { return }
+        NSApplication.shared.mainWindow?.beginSheet(window, completionHandler: nil)
     }
 }

@@ -18,16 +18,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return _preferenceWindowController
     }()
 
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         NSApplication.shared.windows[0].isReleasedWhenClosed = false
     }
 
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
-    }
-    
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
         if flag == true {
             return false
@@ -41,13 +36,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @IBAction func handleNewAccountItemAction(_ sender: NSMenuItem) {
-        let viewController = NSApplication.shared.mainWindow?.contentViewController as! SWMainViewController
+        guard let viewController = NSApplication.shared.mainWindow?.contentViewController as? SWMainViewController else { return }
         viewController.showAddAccountWindow(sender)
     }
 
     @IBAction func openGitHubRepoLink(_ sender: NSMenuItem) {
-        let url = URL(string: "https://github.com/X140Yu/Switcher")!
+        guard let url = URL(string: "https://github.com/X140Yu/Switcher") else { return }
         NSWorkspace.shared.open(url)
     }
 }
-

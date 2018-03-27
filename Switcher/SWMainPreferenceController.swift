@@ -13,14 +13,14 @@ class SWMainPreferenceController: NSViewController, MASPreferencesViewController
 
     @IBOutlet weak var menuBarBox: NSButton!
     @IBOutlet weak var passwordOnDiskBox: NSButton!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         menuBarBox.state = NSControl.StateValue(rawValue: SWPreferences.showMenuBar() == true ? 1 : 0)
         passwordOnDiskBox.state = NSControl.StateValue(rawValue: SWPreferences.passwordOnDisk() == true ? 1 : 0)
     }
-    
+
     // MARK: - IBAction    
     @IBAction func clickMenuBarBox(_ sender: NSButton) {
         if sender.state.rawValue == 1 {
@@ -44,7 +44,7 @@ class SWMainPreferenceController: NSViewController, MASPreferencesViewController
     }
 
     var toolbarItemImage: NSImage? {
-        return NSImage(named : NSImage.Name.preferencesGeneral)!
+        return NSImage(named: .preferencesGeneral)
     }
 
     var toolbarItemLabel: String? {

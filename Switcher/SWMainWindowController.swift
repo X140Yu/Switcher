@@ -12,7 +12,7 @@ class SWMainWindowController: NSWindowController {
 
     override func windowDidLoad() {
         super.windowDidLoad()
-        
+
         // http://blog.seedlab.io/currencyx-like-window/
         if let window = self.window {
             window.titleVisibility = .hidden

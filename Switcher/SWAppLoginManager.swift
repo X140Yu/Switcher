@@ -10,36 +10,31 @@ import Foundation
 import AppKit
 
 class SWAppLoginManager {
-    static func loginAppStoreWith(_ appleID: String, password: String) {
 
-        let path = Bundle.main.path(forResource: "AppStore", ofType: "txt")
-        var content = try! NSString(contentsOfFile: path!, encoding: 0) as String
-        content = content.replacingOccurrences(of: "$APP_ID", with: appleID)
-        content = content.replacingOccurrences(of: "$PASSWORD", with: password)
-
-        let appleScript = NSAppleScript(source: content)
+    static func loginWith(_ type: SWLoginType, appleID: String, password: String) {
+        var resourceName: String = ""
+        switch type {
+        case .appStore:
+            resourceName = "AppStore"
+        case .iTunes:
+            resourceName = "iTunes"
+        case .none:
+            assertionFailure("should not be none")
+        }
+        guard let path = Bundle.main.path(forResource: resourceName, ofType: "txt") else { return }
+        guard let content = try? NSString(contentsOfFile: path, encoding: 0) as String else { return }
+        guard let appleScript = NSAppleScript(source: processScript(content, appleID: appleID, password: password)) else { return }
 
         var errorInfo: NSDictionary? = nil
-        appleScript!.executeAndReturnError(&errorInfo)
-        if let _ = errorInfo {
+        appleScript.executeAndReturnError(&errorInfo)
+        if errorInfo != nil {
             ErrorHanding.showErrorDialog()
         }
     }
-    
-    static func loginiTnesWith(_ appleID: String, password: String) {
 
-        let path = Bundle.main.path(forResource: "iTunes", ofType: "txt")
-        var content = try! NSString(contentsOfFile: path!, encoding: 0) as String
-        content = content.replacingOccurrences(of: "$APP_ID", with: appleID)
-        content = content.replacingOccurrences(of: "$PASSWORD", with: password)
-
-        let appleScript = NSAppleScript(source: content)
-
-        var errorInfo: NSDictionary? = nil
-        appleScript!.executeAndReturnError(&errorInfo)
-        if let _ = errorInfo {
-            ErrorHanding.showErrorDialog()
-        }
+    static func processScript(_ content: String, appleID: String, password: String) -> String {
+        let result = content.replacingOccurrences(of: "$APP_ID", with: appleID)
+        return result.replacingOccurrences(of: "$PASSWORD", with: password)
     }
 }
 

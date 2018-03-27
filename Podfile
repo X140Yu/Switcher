@@ -6,5 +6,6 @@ target 'Switcher' do
   use_frameworks!
 
   pod 'MASPreferences'
+  pod 'SwiftLint'
 
 end

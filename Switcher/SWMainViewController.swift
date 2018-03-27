@@ -17,17 +17,18 @@ class SWMainViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
     let newAccountSheet = SWNewAccountWindowController(windowNibName: NSNib.Name(rawValue: "SWNewAccountWindowController"))
     var userNameArray = SWAccountManager.getUserNameArray()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         newAccountSheet.delegate = self
     }
-    
+
     func showAddAccountWindow(_ sender: NSMenuItem) {
+        guard let window = newAccountSheet.window else { return }
         sender.isHidden = true
-        NSApplication.shared.mainWindow?.beginSheet(newAccountSheet.window!, completionHandler: { (response) in
+        NSApplication.shared.mainWindow?.beginSheet(window) { _ in
             sender.isHidden = false
-        })
+        }
     }
 }
 
@@ -38,7 +39,7 @@ extension SWMainViewController: NSTableViewDataSource, NSTableViewDelegate {
     }
 
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "cell"), owner: self) as! SWMainTableCellView
+        guard let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "cell"), owner: self) as? SWMainTableCellView else { return nil }
         cell.emailTextField.stringValue = userNameArray[row]
         return cell
     }
@@ -62,4 +63,3 @@ extension SWMainViewController: SWAddAccountDelegate {
         tableView.reloadData()
     }
 }
-

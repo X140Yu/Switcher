@@ -156,6 +156,7 @@
 				A8C794FF1CF9317300FA3A7F /* Resources */,
 				FB66DB597074D54676D0AF0A /* [CP] Embed Pods Frameworks */,
 				72B7C037C8937FB8D927AEA7 /* [CP] Copy Pods Resources */,
+				A849E11B206A3C1C00078929 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -250,6 +251,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Switcher/Pods-Switcher-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		A849E11B206A3C1C00078929 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 		FB66DB597074D54676D0AF0A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
