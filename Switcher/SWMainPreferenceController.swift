@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import MASPreferences
 
 class SWMainPreferenceController: NSViewController, MASPreferencesViewController {
 
@@ -38,21 +39,15 @@ class SWMainPreferenceController: NSViewController, MASPreferencesViewController
         }
     }
 
-    // MARK: - Override
-    override var identifier: String? {
-        get {
-            return "GeneralPreference"
-        }
-        set {
-            super.identifier = newValue
-        }
+    var viewIdentifier: String {
+        return "GeneralPreference"
     }
-    
-    var toolbarItemImage: NSImage! {
+
+    var toolbarItemImage: NSImage? {
         return NSImage(named : NSImageNamePreferencesGeneral)!
     }
-    
-    var toolbarItemLabel: String {
+
+    var toolbarItemLabel: String? {
         return "General"
     }
 }

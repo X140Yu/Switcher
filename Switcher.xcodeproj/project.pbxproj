@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84755F5FF870492CD273BFFF /* Pods_Switcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DCEC7B9DCEBE912153EB22 /* Pods_Switcher.framework */; };
 		A81312151D0316F000C40C4A /* SWMainTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81312141D0316F000C40C4A /* SWMainTableCellView.swift */; };
 		A81312171D03223200C40C4A /* SWMainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81312161D03223200C40C4A /* SWMainTableView.swift */; };
 		A85CD37320690F4300406B5A /* AppStore.txt in Resources */ = {isa = PBXBuildFile; fileRef = A85CD37220690F4300406B5A /* AppStore.txt */; };
@@ -18,8 +19,6 @@
 		A8C795071CF9317300FA3A7F /* SWMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C795061CF9317300FA3A7F /* SWMainViewController.swift */; };
 		A8C795091CF9317300FA3A7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C795081CF9317300FA3A7F /* Assets.xcassets */; };
 		A8C7950C1CF9317300FA3A7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C7950A1CF9317300FA3A7F /* Main.storyboard */; };
-		A8EC4CDC1D2BA9350062C34D /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EC4CDB1D2BA9350062C34D /* MASPreferencesWindowController.m */; };
-		A8EC4CDE1D2BA9440062C34D /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8EC4CDD1D2BA9440062C34D /* MASPreferencesWindow.xib */; };
 		A8EC4CE31D2BAAE30062C34D /* SWMainPreferenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EC4CE11D2BAAE30062C34D /* SWMainPreferenceController.swift */; };
 		A8EC4CE41D2BAAE30062C34D /* SWMainPreferenceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8EC4CE21D2BAAE30062C34D /* SWMainPreferenceController.xib */; };
 		A8EC4CE61D2BB29A0062C34D /* SWPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EC4CE51D2BB29A0062C34D /* SWPreferences.swift */; };
@@ -30,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04DD167AA3688EA083AFAC09 /* Pods-Switcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Switcher.release.xcconfig"; path = "Pods/Target Support Files/Pods-Switcher/Pods-Switcher.release.xcconfig"; sourceTree = "<group>"; };
+		295D74DF87F0F2F4F1347768 /* Pods-Switcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Switcher.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Switcher/Pods-Switcher.debug.xcconfig"; sourceTree = "<group>"; };
 		A81312141D0316F000C40C4A /* SWMainTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMainTableCellView.swift; sourceTree = "<group>"; };
 		A81312161D03223200C40C4A /* SWMainTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMainTableView.swift; sourceTree = "<group>"; };
 		A85CD37220690F4300406B5A /* AppStore.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppStore.txt; sourceTree = "<group>"; };
@@ -43,12 +44,6 @@
 		A8C795081CF9317300FA3A7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8C7950B1CF9317300FA3A7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8C7950D1CF9317300FA3A7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A8EC4CD71D2BA9340062C34D /* Switcher-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Switcher-Bridging-Header.h"; sourceTree = "<group>"; };
-		A8EC4CD81D2BA9350062C34D /* MASPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferences.h; sourceTree = "<group>"; };
-		A8EC4CD91D2BA9350062C34D /* MASPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesViewController.h; sourceTree = "<group>"; };
-		A8EC4CDA1D2BA9350062C34D /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
-		A8EC4CDB1D2BA9350062C34D /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
-		A8EC4CDD1D2BA9440062C34D /* MASPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASPreferencesWindow.xib; sourceTree = "<group>"; };
 		A8EC4CE11D2BAAE30062C34D /* SWMainPreferenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMainPreferenceController.swift; sourceTree = "<group>"; };
 		A8EC4CE21D2BAAE30062C34D /* SWMainPreferenceController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SWMainPreferenceController.xib; sourceTree = "<group>"; };
 		A8EC4CE51D2BB29A0062C34D /* SWPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWPreferences.swift; sourceTree = "<group>"; };
@@ -56,6 +51,7 @@
 		A8F7C9461D09A072009422D2 /* SWAppLoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWAppLoginManager.swift; sourceTree = "<group>"; };
 		A8F7C9481D09A5E2009422D2 /* SWEnterPasswordWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWEnterPasswordWindowController.swift; sourceTree = "<group>"; };
 		A8F7C9491D09A5E2009422D2 /* SWEnterPasswordWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SWEnterPasswordWindowController.xib; sourceTree = "<group>"; };
+		B7DCEC7B9DCEBE912153EB22 /* Pods_Switcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Switcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,16 +59,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84755F5FF870492CD273BFFF /* Pods_Switcher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27B521502B09327DE95504F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7DCEC7B9DCEBE912153EB22 /* Pods_Switcher.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E51D8B3B79CB54C75DD9EDF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				295D74DF87F0F2F4F1347768 /* Pods-Switcher.debug.xcconfig */,
+				04DD167AA3688EA083AFAC09 /* Pods-Switcher.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A81312181D03235700C40C4A /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				A8EC4CD71D2BA9340062C34D /* Switcher-Bridging-Header.h */,
 				A8C795041CF9317300FA3A7F /* AppDelegate.swift */,
 				A8C795081CF9317300FA3A7F /* Assets.xcassets */,
 				A8C7950D1CF9317300FA3A7F /* Info.plist */,
@@ -87,6 +100,8 @@
 			children = (
 				A8C795031CF9317300FA3A7F /* Switcher */,
 				A8C795021CF9317300FA3A7F /* Products */,
+				9E51D8B3B79CB54C75DD9EDF /* Pods */,
+				27B521502B09327DE95504F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				A8EC4CE01D2BAAB90062C34D /* Preference */,
-				A8EC4CD61D2BA8B10062C34D /* ThirdParty */,
 				A8C795061CF9317300FA3A7F /* SWMainViewController.swift */,
 				A81312141D0316F000C40C4A /* SWMainTableCellView.swift */,
 				A81312161D03223200C40C4A /* SWMainTableView.swift */,
@@ -117,26 +131,6 @@
 				A81312181D03235700C40C4A /* Supporting files */,
 			);
 			path = Switcher;
-			sourceTree = "<group>";
-		};
-		A8EC4CD61D2BA8B10062C34D /* ThirdParty */ = {
-			isa = PBXGroup;
-			children = (
-				A8EC4CDF1D2BA9510062C34D /* MASPreferences */,
-			);
-			name = ThirdParty;
-			sourceTree = "<group>";
-		};
-		A8EC4CDF1D2BA9510062C34D /* MASPreferences */ = {
-			isa = PBXGroup;
-			children = (
-				A8EC4CD81D2BA9350062C34D /* MASPreferences.h */,
-				A8EC4CD91D2BA9350062C34D /* MASPreferencesViewController.h */,
-				A8EC4CDA1D2BA9350062C34D /* MASPreferencesWindowController.h */,
-				A8EC4CDB1D2BA9350062C34D /* MASPreferencesWindowController.m */,
-				A8EC4CDD1D2BA9440062C34D /* MASPreferencesWindow.xib */,
-			);
-			name = MASPreferences;
 			sourceTree = "<group>";
 		};
 		A8EC4CE01D2BAAB90062C34D /* Preference */ = {
@@ -156,9 +150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8C795101CF9317300FA3A7F /* Build configuration list for PBXNativeTarget "Switcher" */;
 			buildPhases = (
+				15D77E842251D1E0CC514707 /* [CP] Check Pods Manifest.lock */,
 				A8C794FD1CF9317300FA3A7F /* Sources */,
 				A8C794FE1CF9317300FA3A7F /* Frameworks */,
 				A8C794FF1CF9317300FA3A7F /* Resources */,
+				FB66DB597074D54676D0AF0A /* [CP] Embed Pods Frameworks */,
+				72B7C037C8937FB8D927AEA7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,7 +209,6 @@
 				A865212D1D09698B00C26D0F /* SWNewAccountWindowController.xib in Resources */,
 				A8C795091CF9317300FA3A7F /* Assets.xcassets in Resources */,
 				A85CD37320690F4300406B5A /* AppStore.txt in Resources */,
-				A8EC4CDE1D2BA9440062C34D /* MASPreferencesWindow.xib in Resources */,
 				A8C7950C1CF9317300FA3A7F /* Main.storyboard in Resources */,
 				A8F7C94B1D09A5E2009422D2 /* SWEnterPasswordWindowController.xib in Resources */,
 				A8EC4CE41D2BAAE30062C34D /* SWMainPreferenceController.xib in Resources */,
@@ -220,6 +216,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15D77E842251D1E0CC514707 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Switcher-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72B7C037C8937FB8D927AEA7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Switcher/Pods-Switcher-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB66DB597074D54676D0AF0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Switcher/Pods-Switcher-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MASPreferences/MASPreferences.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASPreferences.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Switcher/Pods-Switcher-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A8C794FD1CF9317300FA3A7F /* Sources */ = {
@@ -231,7 +281,6 @@
 				A81312151D0316F000C40C4A /* SWMainTableCellView.swift in Sources */,
 				A8F7C9451D099322009422D2 /* SWAccountManager.swift in Sources */,
 				A8C795071CF9317300FA3A7F /* SWMainViewController.swift in Sources */,
-				A8EC4CDC1D2BA9350062C34D /* MASPreferencesWindowController.m in Sources */,
 				A81312171D03223200C40C4A /* SWMainTableView.swift in Sources */,
 				A8EC4CE31D2BAAE30062C34D /* SWMainPreferenceController.swift in Sources */,
 				A865212C1D09698B00C26D0F /* SWNewAccountWindowController.swift in Sources */,
@@ -339,6 +388,7 @@
 		};
 		A8C795111CF9317300FA3A7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 295D74DF87F0F2F4F1347768 /* Pods-Switcher.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -348,7 +398,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.X140Yu.Switcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Switcher/Switcher-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -356,6 +406,7 @@
 		};
 		A8C795121CF9317300FA3A7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04DD167AA3688EA083AFAC09 /* Pods-Switcher.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -365,7 +416,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.X140Yu.Switcher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Switcher/Switcher-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

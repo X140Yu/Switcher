@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import MASPreferences
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -14,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     lazy var preferenceWindowController: NSWindowController = {
         let preferenceMain = SWMainPreferenceController()
         let _preferenceWindowController = MASPreferencesWindowController(viewControllers: [preferenceMain], title: "Preferences")
-        return _preferenceWindowController!
+        return _preferenceWindowController
     }()
 
 
