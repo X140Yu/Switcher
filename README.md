@@ -1,5 +1,7 @@
 # Switcher
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## [中文说明](#chinese)
 
 Switcher is an OS X App which helps you easily switch Apple ID in App Store & iTunes App.
