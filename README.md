@@ -1,5 +1,6 @@
 # Switcher
 
+[![Build Status](https://travis-ci.org/X140Yu/Switcher.svg?branch=master)](https://travis-ci.org/X140Yu/Switcher)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## [中文说明](#chinese)
