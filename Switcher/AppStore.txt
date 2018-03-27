@@ -1,0 +1,33 @@
+on appIsRunning(appName)
+    tell application "System Events" to (name of processes) contains appName
+end appIsRunning
+
+on startApp(appName)
+    set IsRunning to false
+    set tries to 20
+    repeat until (IsRunning is true or tries is 0)
+        set IsRunning to appIsRunning(appName)
+        set tries to (tries - 1)
+        delay 0.1
+    end repeat
+end startApp
+
+startApp("App Store")
+
+do shell script "open -a App Store"
+tell application "System Events" to tell process "App Store"
+    set frontmost to true
+    key code 53
+    try
+        click menu item 12 of menu 1 of menu bar item 4 of menu bar 1
+    end try
+    delay 0.5
+    click menu item 12 of menu 1 of menu bar item 4 of menu bar 1
+    repeat until exists sheet 1 of window 1
+        delay 0.2
+    end repeat
+    set value of text field 2 of sheet 1 of window 1 to "$APP_ID"
+    set value of text field 1 of sheet 1 of window 1 to "$PASSWORD"
+    delay 0.5
+    keystroke return
+end tell

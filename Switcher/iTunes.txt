@@ -1,0 +1,31 @@
+on appIsRunning(appName)
+    tell application "System Events" to (name of processes) contains appName
+end appIsRunning
+
+on startApp(appName)
+    set IsRunning to false
+    set tries to 20
+    repeat until (IsRunning is true or tries is 0)
+        set IsRunning to appIsRunning(appName)
+        set tries to (tries - 1)
+        delay 0.1
+    end repeat
+end startApp
+
+startApp("iTunes")
+
+do shell script "open -a iTunes"
+tell application "System Events" to tell process "iTunes"
+    set frontmost to true
+    key code 53
+    try
+        click menu item 6 of menu 1 of menu bar item 8 of menu bar 1
+    end try
+    delay 0.5
+    click menu item 2 of menu 1 of menu bar item 8 of menu bar 1
+    delay 0.2
+    keystroke "$APP_ID"
+    keystroke tab
+    keystroke "$PASSWORD"
+    keystroke return
+end tell

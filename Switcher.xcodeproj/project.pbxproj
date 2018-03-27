@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A81312151D0316F000C40C4A /* SWMainTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81312141D0316F000C40C4A /* SWMainTableCellView.swift */; };
 		A81312171D03223200C40C4A /* SWMainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81312161D03223200C40C4A /* SWMainTableView.swift */; };
+		A85CD37320690F4300406B5A /* AppStore.txt in Resources */ = {isa = PBXBuildFile; fileRef = A85CD37220690F4300406B5A /* AppStore.txt */; };
+		A85CD3752069EAC500406B5A /* iTunes.txt in Resources */ = {isa = PBXBuildFile; fileRef = A85CD3742069EAC500406B5A /* iTunes.txt */; };
 		A861CAEB1D2BFB5F00BA0BAC /* SWMainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A861CAEA1D2BFB5F00BA0BAC /* SWMainWindowController.swift */; };
 		A865212C1D09698B00C26D0F /* SWNewAccountWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A865212A1D09698B00C26D0F /* SWNewAccountWindowController.swift */; };
 		A865212D1D09698B00C26D0F /* SWNewAccountWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A865212B1D09698B00C26D0F /* SWNewAccountWindowController.xib */; };
@@ -30,6 +32,8 @@
 /* Begin PBXFileReference section */
 		A81312141D0316F000C40C4A /* SWMainTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMainTableCellView.swift; sourceTree = "<group>"; };
 		A81312161D03223200C40C4A /* SWMainTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMainTableView.swift; sourceTree = "<group>"; };
+		A85CD37220690F4300406B5A /* AppStore.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = AppStore.txt; sourceTree = "<group>"; };
+		A85CD3742069EAC500406B5A /* iTunes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = iTunes.txt; sourceTree = "<group>"; };
 		A861CAEA1D2BFB5F00BA0BAC /* SWMainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWMainWindowController.swift; sourceTree = "<group>"; };
 		A865212A1D09698B00C26D0F /* SWNewAccountWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SWNewAccountWindowController.swift; sourceTree = "<group>"; };
 		A865212B1D09698B00C26D0F /* SWNewAccountWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SWNewAccountWindowController.xib; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				A8C795041CF9317300FA3A7F /* AppDelegate.swift */,
 				A8C795081CF9317300FA3A7F /* Assets.xcassets */,
 				A8C7950D1CF9317300FA3A7F /* Info.plist */,
+				A85CD37220690F4300406B5A /* AppStore.txt */,
+				A85CD3742069EAC500406B5A /* iTunes.txt */,
 			);
 			name = "Supporting files";
 			sourceTree = "<group>";
@@ -202,8 +208,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A85CD3752069EAC500406B5A /* iTunes.txt in Resources */,
 				A865212D1D09698B00C26D0F /* SWNewAccountWindowController.xib in Resources */,
 				A8C795091CF9317300FA3A7F /* Assets.xcassets in Resources */,
+				A85CD37320690F4300406B5A /* AppStore.txt in Resources */,
 				A8EC4CDE1D2BA9440062C34D /* MASPreferencesWindow.xib in Resources */,
 				A8C7950C1CF9317300FA3A7F /* Main.storyboard in Resources */,
 				A8F7C94B1D09A5E2009422D2 /* SWEnterPasswordWindowController.xib in Resources */,
