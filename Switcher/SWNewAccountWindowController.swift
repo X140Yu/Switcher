@@ -22,11 +22,11 @@ class SWNewAccountWindowController: NSWindowController {
         let appleID = textField.stringValue
         if appleID != "" {
             delegate?.didAddAccount(appleID)
-            window?.sheetParent?.endSheet(window!, returnCode: NSModalResponseOK)
+            window?.sheetParent?.endSheet(window!, returnCode: NSApplication.ModalResponse.OK)
         }
     }
     
     @IBAction func cancel(_ sender: NSButton) {
-        window?.sheetParent?.endSheet(window!, returnCode: NSModalResponseCancel)
+        window?.sheetParent?.endSheet(window!, returnCode: NSApplication.ModalResponse.cancel)
     }
 }

@@ -15,7 +15,7 @@ protocol SWAddAccountDelegate: class {
 class SWMainViewController: NSViewController {
 
     @IBOutlet weak var tableView: NSTableView!
-    let newAccountSheet = SWNewAccountWindowController(windowNibName: "SWNewAccountWindowController")
+    let newAccountSheet = SWNewAccountWindowController(windowNibName: NSNib.Name(rawValue: "SWNewAccountWindowController"))
     var userNameArray = SWAccountManager.getUserNameArray()
     
     override func viewDidLoad() {
@@ -25,20 +25,20 @@ class SWMainViewController: NSViewController {
     
     func showAddAccountWindow(_ sender: NSMenuItem) {
         sender.isHidden = true
-        NSApplication.shared().mainWindow?.beginSheet(newAccountSheet.window!, completionHandler: { (response) in
+        NSApplication.shared.mainWindow?.beginSheet(newAccountSheet.window!, completionHandler: { (response) in
             sender.isHidden = false
         })
     }
 }
 
 // MARK: - TableView DataSource
-extension SWMainViewController: NSTableViewDataSource {
+extension SWMainViewController: NSTableViewDataSource, NSTableViewDelegate {
     func numberOfRows(in tableView: NSTableView) -> Int {
         return userNameArray.count
     }
-    
-    func tableView(_ tableView: NSTableView, viewForTableColumn tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        let cell = tableView.make(withIdentifier: "cell", owner: self) as! SWMainTableCellView
+
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "cell"), owner: self) as! SWMainTableCellView
         cell.emailTextField.stringValue = userNameArray[row]
         return cell
     }

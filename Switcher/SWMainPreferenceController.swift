@@ -17,13 +17,13 @@ class SWMainPreferenceController: NSViewController, MASPreferencesViewController
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        menuBarBox.state = SWPreferences.showMenuBar() == true ? 1 : 0
-        passwordOnDiskBox.state = SWPreferences.passwordOnDisk() == true ? 1 : 0
+        menuBarBox.state = NSControl.StateValue(rawValue: SWPreferences.showMenuBar() == true ? 1 : 0)
+        passwordOnDiskBox.state = NSControl.StateValue(rawValue: SWPreferences.passwordOnDisk() == true ? 1 : 0)
     }
     
     // MARK: - IBAction    
     @IBAction func clickMenuBarBox(_ sender: NSButton) {
-        if sender.state == 1 {
+        if sender.state.rawValue == 1 {
             SWPreferences.saveShowMenuBarOption(true)
         } else {
             SWPreferences.saveShowMenuBarOption(false)
@@ -31,7 +31,7 @@ class SWMainPreferenceController: NSViewController, MASPreferencesViewController
     }
 
     @IBAction func clickPasswordBox(_ sender: NSButton) {
-        if sender.state == 1 {
+        if sender.state.rawValue == 1 {
             SWPreferences.savePasswordOnDiskOption(true)
         } else {
             SWAccountManager.clearPasswordDiskCache()
@@ -44,7 +44,7 @@ class SWMainPreferenceController: NSViewController, MASPreferencesViewController
     }
 
     var toolbarItemImage: NSImage? {
-        return NSImage(named : NSImageNamePreferencesGeneral)!
+        return NSImage(named : NSImage.Name.preferencesGeneral)!
     }
 
     var toolbarItemLabel: String? {

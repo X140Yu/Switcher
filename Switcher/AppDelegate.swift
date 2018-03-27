@@ -21,7 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
-        NSApplication.shared().windows[0].isReleasedWhenClosed = false
+        NSApplication.shared.windows[0].isReleasedWhenClosed = false
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -32,7 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if flag == true {
             return false
         } else {
-            NSApplication.shared().windows[0].makeKeyAndOrderFront(self)
+            NSApplication.shared.windows[0].makeKeyAndOrderFront(self)
             return true
         }
     }
@@ -41,13 +41,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     @IBAction func handleNewAccountItemAction(_ sender: NSMenuItem) {
-        let viewController = NSApplication.shared().mainWindow?.contentViewController as! SWMainViewController
+        let viewController = NSApplication.shared.mainWindow?.contentViewController as! SWMainViewController
         viewController.showAddAccountWindow(sender)
     }
 
     @IBAction func openGitHubRepoLink(_ sender: NSMenuItem) {
         let url = URL(string: "https://github.com/X140Yu/Switcher")!
-        NSWorkspace.shared().open(url)
+        NSWorkspace.shared.open(url)
     }
 }
 

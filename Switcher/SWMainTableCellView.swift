@@ -11,7 +11,7 @@ import Cocoa
 class SWMainTableCellView: NSTableCellView {
 
     @IBOutlet weak var emailTextField: NSTextField!
-    let enterPasswordSheet = SWEnterPasswordWindowController(windowNibName: "SWEnterPasswordWindowController")
+    let enterPasswordSheet = SWEnterPasswordWindowController(windowNibName: NSNib.Name(rawValue: "SWEnterPasswordWindowController"))
 
     @IBAction func loginAppStore(_ sender: NSButton) {
         enterPasswordSheet.loginType = SWLoginType.appStore
@@ -32,6 +32,6 @@ class SWMainTableCellView: NSTableCellView {
         }
         
         enterPasswordSheet.userName = userName
-        NSApplication.shared().mainWindow?.beginSheet(enterPasswordSheet.window!, completionHandler: nil)
+        NSApplication.shared.mainWindow?.beginSheet(enterPasswordSheet.window!, completionHandler: nil)
     }
 }

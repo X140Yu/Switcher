@@ -32,7 +32,7 @@ class SWEnterPasswordWindowController: NSWindowController {
         let password = passwordTextField.stringValue
         if password != "" {
             SWAccountManager.sharedInstance.save(password, with: userName)
-            window?.sheetParent?.endSheet(window!, returnCode: NSModalResponseOK)
+            window?.sheetParent?.endSheet(window!, returnCode: NSApplication.ModalResponse.OK)
             switch loginType {
             case .appStore:
                 SWAppLoginManager.loginAppStoreWith(userName, password: password)
@@ -44,6 +44,6 @@ class SWEnterPasswordWindowController: NSWindowController {
     }
 
     @IBAction func cancel(_ sender: NSButton) {
-        window?.sheetParent?.endSheet(window!, returnCode: NSModalResponseCancel)
+        window?.sheetParent?.endSheet(window!, returnCode: NSApplication.ModalResponse.cancel)
     }
 }
