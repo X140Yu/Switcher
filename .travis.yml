@@ -4,4 +4,6 @@ podfile: Podfile
 
 script:
   - set -o pipefail && xcodebuild -workspace Switcher.xcworkspace -scheme Switcher -sdk macosx10.13 | xcpretty
+before_install:
+  - pod repo update
 
